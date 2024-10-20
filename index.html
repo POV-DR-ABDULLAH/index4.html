@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // .4
+        let pilihan = prompt(
+            "Pilih menu:\n" +
+            "1. Air Mineral = Rp 3.000\n" +
+            "2. Teh = Rp 4.000\n" +
+            "3. Kopi = Rp 5.000\n" +
+            "Masukkan Apa Yang Anda Inginkan : "
+        );
+
+        let harga;
+        let YangDibeli;
+
+        if (pilihan === "1") {
+            harga = 3.000;
+            YangDibeli = "Air Mineral";
+        } else if (pilihan === "2") {
+            harga = 4.000;
+            YangDibeli = "Teh";
+        } else if (pilihan === "3") {
+            harga = 5.000;
+            YangDibeli = "Kopi";
+        } else {
+            alert("Pilihan tidak ada di menu");
+        }
+
+        let uang = parseInt(prompt(`Masukkan jumlah uang untuk membeli ${YangDibeli}:`));
+
+        if (uang >= harga) {
+            let kembalian = uang - harga;
+            alert(`Berhasil membeli ${YangDibeli} ! Kembalian Anda: Rp ${kembalian}`);
+        } else {
+            alert(`Uang tidak cukup untuk membeli ${YangDibeli}.`);
+        }
+    </script>
+</body>
+</html>
